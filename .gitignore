@@ -1,0 +1,24 @@
+**/node_modules/
+
+**/.env
+
+**/*.log
+
+.DS_Store
+Thumbs.db
+
+**/.next/
+**/out/
+
+**/package-lock.json
+**/yarn.lock
+
+**/coverage/
+
+**/dist/
+
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+
+# Ignore editor config files
+.vscode/
