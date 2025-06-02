@@ -1,10 +1,10 @@
 class ApiError extends Error {
-  constructor(statusCode, message) {
+  constructor(status, message) {
     super(message);
-    this.statusCode = statusCode;
+    this.status = status;
     this.message = message;
 
-    this.stack = new Error.captureStackTrace(this, this.constructor);
+    Error.captureStackTrace(this, this.constructor);
   }
 
   static badRequest(message) {
@@ -27,3 +27,5 @@ class ApiError extends Error {
     return new ApiError(500, message);
   }
 }
+
+export default ApiError;
